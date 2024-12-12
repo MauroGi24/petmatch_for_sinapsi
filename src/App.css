@@ -13,6 +13,10 @@
   color: white;
 }
 
+.w-10 {
+  width: 10%;
+}
+
 .nav-ico{
   margin-right: 8px;
   color: #ff6f61;
@@ -87,7 +91,6 @@
 }
 
 .flip-card {
-  width: 300px; 
   height: 400px; 
   perspective: 700px;
 }

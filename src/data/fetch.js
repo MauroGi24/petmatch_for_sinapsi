@@ -11,6 +11,17 @@ export const fetchDogData = async () => {
     return data;
   } catch (error) {
     console.error('Errore:', error);
-    throw error;
+    throw error
+  }
+}
+
+export const fetchRegions = async () => {
+  try {
+    const response = await fetch('https://restcountries.com/v3.1/region/europe');
+    const data = await response.json();
+    return data; 
+  } catch (error) {
+    console.error('Errore:', error);
+    throw error
   }
 }

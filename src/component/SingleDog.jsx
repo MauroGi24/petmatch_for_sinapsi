@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Card, Button } from "react-bootstrap";
 
-function SingleDog({ dogData }) {
+function SingleDog({ dogData, region }) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleFlip = () => {
@@ -53,14 +53,19 @@ function SingleDog({ dogData }) {
                   More about {dogData.breeds[0]?.name || "This dog"}
                 </Card.Title>
                 <Card.Text>
-                  <p>
+                  <span>
                     <strong>Breed for: </strong>
                     {dogData.breeds[0]?.bred_for || "Unknown"}
-                  </p>
-                  <p>
+                  </span>
+                  <span>
                     <strong>Temperament: </strong>
                     {dogData.breeds[0]?.temperament || "Unknown"}
-                  </p>
+                  </span>
+                  <span>
+                    <strong>City: </strong>
+                    {region.capital || "Unknown"}{' '}
+                    <img className="w-10" src={region.flags.png}  alt={region.flags.alt}/>
+                  </span>
                 </Card.Text>
                 <Button className="card-button" onClick={handleFlip}>
                   Go Back
