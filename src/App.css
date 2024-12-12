@@ -1,0 +1,119 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.nav-ico{
+  margin-right: 8px;
+  color: #ff6f61;
+  font-size: 28px;
+}
+
+.nav-title {
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+}
+
+.navlink {
+  color: #333;
+  margin-right: 15px;
+}
+
+.text-error {
+  color: red;
+}
+
+/* Card Style */
+
+.card {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.card-img-wrapper {
+  height: 250px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  color: #555;
+  font-size: 1rem;
+}
+
+.card-text span {
+  display: block;  
+}
+
+.card-text strong {
+  color: #333;
+}
+
+.card-button {
+  font-size: 14px;
+  padding: 8px 16px;
+  background-color: #ff6f61;
+  border: none;
+  transition: background-color 0.4s ease;
+}
+
+.card-button:hover {
+  background-color: #ff5347;
+}
+
+.flip-card {
+  width: 300px; 
+  height: 400px; 
+  perspective: 700px;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: white; 
+  border-radius: 8px;
+}
